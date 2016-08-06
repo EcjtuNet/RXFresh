@@ -1,0 +1,351 @@
+/* 中等屏幕（桌面显示器， 992px - 1200px） */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+/*section-5*/
+
+.section-5 > div.pw-wrapper-1-puzzle {
+  width: 200px;
+  height: 380px;
+  -webkit-transform: translate(180px, -50%);
+  -ms-transform: translate(180px, -50%);
+  transform: translate(180px, -50%);
+}
+.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-2, .pw-wrapper-1-puzzle > div.puzzle-map-7 {
+  height: 30px;
+}
+.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-2 {
+  margin-top: -120px;
+  margin-left: -20px;
+}
+.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-7 {
+  margin-top: 100px;
+  margin-left: 20px;
+}
+.section-5 > div.pw-wrapper-1-necessary {
+  -webkit-transform: translate(-75%, 50%);
+  -ms-transform: translate(-75%, 50%);
+  transform: translate(-75%, 50%);
+}
+.section-5.active > div.pw-wrapper-1-necessary {
+  -webkit-transform: translate(-75%, 0);
+  -ms-transform: translate(-75%, 0);
+  transform: translate(-75%, 0);
+}
+
+/*section-6*/
+
+.section-6 > div.pw-wrapper-1-Route {
+    width: 400px;
+}
+
+}
+
+
+
+/* 小屏幕（平板， 768px - 992px） */
+@media (min-width: 768px) and (max-width: 992px) {
+
+/*pw-panel-header-box*/
+
+.pw-panel-header > div.pw-panel-header-box {
+  width: 50px;
+}
+.pw-panel-header > div.pw-panel-header-box > p.title-en {
+  margin-top: 80px;
+  -ms-transform: scale(0.90) rotate(-90deg);
+  -moz-transform: scale(0.90) rotate(-90deg);
+  -webkit-transform: scale(0.90) rotate(-90deg);
+  transform: scale(0.90) rotate(-90deg);
+}
+
+/*fullpage_2*/
+
+/*section-5*/
+
+.section-5 > div.pw-wrapper-1-puzzle {
+  display: none;
+}
+.section-5 > div.pw-wrapper-1-necessary {
+  width: 90%;
+  height: -moz-calc(100% - 150px);
+  height: -webkit-calc(100% - 150px);
+  height: -o-calc(100% - 150px);
+  height: calc(100% - 150px);
+  margin: 110px 0 40px;
+  padding: 40px;
+  -webkit-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+.section-5.active > div.pw-wrapper-1-necessary {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.section-5 > div.pw-wrapper-1-necessary > div > div > p.necessary-title {
+  font-size: 28px;
+}
+.section-5 > div.pw-wrapper-1-necessary > div > div > p.necessary-content {
+  margin-top: 20px;
+  font-size: 10px;
+}
+
+/*section-6*/
+
+.section-6 > div.pw-wrapper-1-iphone {
+    display: none;
+}
+.section-6 > div.pw-wrapper-1-Route {
+    width: 100%;
+    height: -moz-calc(100% - 150px);
+    height: -webkit-calc(100% - 150px);
+    height: -o-calc(100% - 150px);
+    height: calc(100% - 150px);
+    margin: 110px 0 40px;
+    padding: 0 50px;
+    right: 0;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+.section-6.active > div.pw-wrapper-1-Route {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+
+}
+
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 768px) {
+
+/*pw-panel-header-box*/
+
+.pw-panel-header > div.pw-panel-header-box {
+  width: 20px;
+}
+.pw-panel-header > div.pw-panel-header-box > span {
+  display: none;
+}
+.pw-panel-header > div.pw-panel-header-box > p.title-en {
+  line-height: 40px;
+}
+.pw-panel-header > div.pw-panel-header-box > p.title-en {
+  margin-top: 80px;
+  -ms-transform: scale(0.90) rotate(-90deg);
+  -moz-transform: scale(0.90) rotate(-90deg);
+  -webkit-transform: scale(0.90) rotate(-90deg);
+  transform: scale(0.90) rotate(-90deg);
+}
+
+/*fullpage_2*/
+
+.section > div.pw-wrapper-1-cont > p {
+  font-size: 14px;
+}
+.section > div.pw-wrapper-1-cont > p.pw-doForYou {
+  font-size: 14px;
+  bottom: 40px;
+  width: 160px;
+}
+.section > div.pw-wrapper-1-back > p {
+  top: 15px;
+  left: 20px;
+  font-size: 10px;
+}
+
+/*section-1*/
+
+.section-1 > div.pw-wrapper-1-welcome {
+  width: 180px;
+  height: 180px;
+  border: rgba(48, 43, 40, 1) 1px solid;
+}
+.section-1 > div.pw-wrapper-1-welcome > span {
+  height: 55px;
+  margin: 5px 0 10px;
+  -webkit-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  transform: translateY(100px);
+}
+.section-1 > div.pw-wrapper-1-welcome > p {
+  font-size: 19px;
+  line-height: 20px;
+}
+.section-1 > div.pw-wrapper-1-welcome > p.title-en {
+  font-size: 10px;
+  line-height: 15px;
+}
+.section-1 > div.pw-wrapper-1-start > p {
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 3px;
+}
+.section-1 > div.pw-wrapper-1-balloon {
+  width: 65px;
+  height: 170px;
+  bottom: -25px;
+}
+
+/*section-2*/
+
+.section-2 > div.pw-wrapper-1-menu {
+  width: 180px;
+  height: 180px;
+  border: rgba(48, 43, 40, 1) 1px solid;
+}
+.section-2 > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-left p {
+  font-size: 10px;
+  padding: 0 10px 0 15px;
+  line-height: 25px;
+}
+.section-2 > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul {
+  padding: 0 30px 0 15px;
+}
+.section-2 > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul > li {
+  font-size: 12px;
+  line-height: 20px;
+}
+.section-2 > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul > li > a > p.title-arrow {
+  width: 10px;
+  height: 10px;
+  margin-top: 6px;
+}
+
+
+/*section-3*/
+
+.section-3 > div.introduction-bg {
+  height: -moz-calc(100% - 100px);
+  height: -webkit-calc(100% - 100px);
+  height: -o-calc(100% - 100px);
+  height: calc(100% - 100px);
+}
+.section-3 > div.pw-wrapper-1-introduction {
+  height: -moz-calc(100% - 100px);
+  height: -webkit-calc(100% - 100px);
+  height: -o-calc(100% - 100px);
+  height: calc(100% - 100px);
+  margin: 70px 0 30px;
+  padding: 0 20px;
+}
+.section-3 > div.pw-wrapper-1-introduction > div > div > p {
+  font-size: 10px;
+  line-height: 27px;
+}
+
+/*section-4*/
+
+.section-4 > div.pw-wrapper-1-policy {
+  width: 260px;
+  height: 260px;
+  top: 50px;
+}
+.section-4 > div.pw-wrapper-1-policy > div.policy-map-2 {
+  top: 19px;
+}
+.section-4 > div.pw-wrapper-1-policy > div.policy-map-5 {
+  bottom: 19px;
+}
+.section-4 > div.pw-wrapper-1-scholarships {
+  height: -moz-calc(100% - 650px);
+  height: -webkit-calc(100% - 650px);
+  height: -o-calc(100% - 650px);
+  height: calc(100% - 310px);
+  margin: 310px 5% 0;
+  padding: 10px 15px;
+}
+.section-4 > div.pw-wrapper-1-scholarships > div > div > p {
+  font-size: 10px;
+}
+
+/*section-5*/
+
+.section-5 > div.pw-wrapper-1-puzzle {
+  /*width: 100px;
+  height: 200px;
+  -webkit-transform: translate(30px, -110%);
+  -ms-transform: translate(30px, -110%);
+  transform: translate(30px, -110%);*/
+  display: none;
+}
+/*.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-2, .pw-wrapper-1-puzzle > div.puzzle-map-7 {
+  height: 20px;
+}
+.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-2 {
+  margin-top: -65px;
+  margin-left: -10px;
+}
+.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-7 {
+  margin-top: 50px;
+  margin-left: 10px;
+}*/
+.section-5 > div.pw-wrapper-1-necessary {
+  width: 90%;
+  height: -moz-calc(100% - 90px);
+  height: -webkit-calc(100% - 90px);
+  height: -o-calc(100% - 90px);
+  height: calc(100% - 90px);
+  margin: 70px 0 20px;
+  padding: 10px;
+  -webkit-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+.section-5.active > div.pw-wrapper-1-necessary {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.section-5 > div.pw-wrapper-1-necessary > div > div > p.necessary-title {
+  font-size: 20px;
+}
+.section-5 > div.pw-wrapper-1-necessary > div > div > p.necessary-content {
+  margin-top: 20px;
+  font-size: 10px;
+}
+
+
+/*section-6*/
+
+.section-6 > div.pw-wrapper-1-iphone {
+    display: none;
+}
+.section-6 > div.pw-wrapper-1-star {
+    width: 30px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+}
+.section-6 > div.pw-wrapper-1-block {
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -100px;
+    transform: rotate(-45deg);
+}
+.section-6 > div.pw-wrapper-1-Route {
+    width: 100%;
+    height: -moz-calc(100% - 90px);
+    height: -webkit-calc(100% - 90px);
+    height: -o-calc(100% - 90px);
+    height: calc(100% - 90px);
+    margin: 70px 0 20px;
+    padding: 0 10px;
+    right: 0;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+.section-6.active > div.pw-wrapper-1-Route {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+}

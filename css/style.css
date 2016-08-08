@@ -201,6 +201,7 @@ div.fsbanner {
 
 #fullpage_2 > div {
   display: block;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -261,7 +262,9 @@ div.fsbanner {
 .section-1 > div.static-bg,
 .section-2 > div.static-bg {
   opacity: 0;
-  transition: all 1s cubic-bezier(0.1, 0, 0.1, 1.0);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.12, 1.01, 0.1, 1), opacity 1s cubic-bezier(0.19,1,0.22,1) 0.2s; 
+  -moz-transition: -moz-transform 0.4s cubic-bezier(0.12, 1.01, 0.1, 1), opacity 1s cubic-bezier(0.19,1,0.22,1) 0.2s; 
+  transition: transform 0.4s cubic-bezier(0.12, 1.01, 0.1, 1), opacity 1s cubic-bezier(0.19,1,0.22,1) 0.2s; 
 }
 .section-1.active > div.static-bg,
 .section-2.active > div.static-bg {
@@ -301,6 +304,45 @@ div.fsbanner {
 
 
 /*section-1*/
+
+.section-1,
+.section-2 {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.section-1 > div.static-bg,
+.section-2 > div.static-bg {
+  width: 110%;
+  height: 110%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, -2000px) scale(3);
+  -ms-transform: translate3d(-50%, -50%, -2000px) scale(3);
+  transform: translate3d(-50%, -50%, -2000px) scale(3);
+}
+
+.pw-dynamic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-transform: translate3d(0, 0, -1000px) scale(2);
+  -ms-transform: translate3d(0, 0, -1000px) scale(2);
+  transform: translate3d(0, 0, -1000px) scale(2);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.pw-dynamic {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.12, 1.01, 0.1, 1); 
+  -moz-transition: -moz-transform 1s cubic-bezier(0.12, 1.01, 0.1, 1); 
+  transition: transform 1s cubic-bezier(0.12, 1.01, 0.1, 1); 
+}
 
 .pw-wrapper-1-welcome {
   position: absolute;
@@ -393,29 +435,29 @@ div.fsbanner {
 /*section-1  active*/
 
 /*动画前效果*/
-.section-1 .pw-wrapper-1-welcome, 
-.section-1 .pw-wrapper-1-welcome > span.pw-wrapper-1-logo,
-.section-1 .pw-wrapper-1-welcome > p,
-.section-1 .pw-wrapper-1-start > p,
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome, 
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > span.pw-wrapper-1-logo,
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > p,
+.section-1 > div.pw-wrapper-1-start > p,
 .section-1 .pw-wrapper-1-balloon {
   opacity: 0;
 }
-.section-1 .pw-wrapper-1-welcome {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome {
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-.section-1 .pw-wrapper-1-welcome > span.pw-wrapper-1-logo {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > span.pw-wrapper-1-logo {
   -webkit-transform: translateY(300px);
   -ms-transform: translateY(300px);
   transform: translateY(300px);
 }
-.section-1 .pw-wrapper-1-welcome > p {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > p {
   -webkit-transform: translateY(70px);
   -ms-transform: translateY(70px);
   transform: translateY(70px);
 }
-.section-1 .pw-wrapper-1-start > p {
+.section-1 > div.pw-wrapper-1-start > p {
   -webkit-transform: translateY(200px);
   -ms-transform: translateY(200px);
   transform: translateY(200px);
@@ -427,21 +469,21 @@ div.fsbanner {
 }
 
 /*动画后效果*/
-.section-1.active .pw-wrapper-1-welcome,
-.section-1.active .pw-wrapper-1-welcome > span.pw-wrapper-1-logo,
-.section-1.active .pw-wrapper-1-welcome > p,
-.section-1.active .pw-wrapper-1-start > p,
+.section-1.active > div.pw-dynamic > div.pw-wrapper-1-welcome,
+.section-1.active > div.pw-dynamic > div.pw-wrapper-1-welcome > span.pw-wrapper-1-logo,
+.section-1.active > div.pw-dynamic > div.pw-wrapper-1-welcome > p,
+.section-1.active > div.pw-wrapper-1-start > p,
 .section-1.active .pw-wrapper-1-balloon {
   opacity: 1;
 }
-.section-1.active .pw-wrapper-1-welcome {
+.section-1.active > div.pw-dynamic > div.pw-wrapper-1-welcome {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.section-1.active .pw-wrapper-1-welcome > span.pw-wrapper-1-logo,
-.section-1.active .pw-wrapper-1-welcome > p,
-.section-1.active .pw-wrapper-1-start > p {
+.section-1.active > div.pw-dynamic > div.pw-wrapper-1-welcome > span.pw-wrapper-1-logo,
+.section-1.active > div.pw-dynamic > div.pw-wrapper-1-welcome > p,
+.section-1.active > div.pw-wrapper-1-start > p {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
@@ -453,22 +495,22 @@ div.fsbanner {
 }
 
 /*动画执行方式*/
-.section-1 .pw-wrapper-1-welcome {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome {
   -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   -moz-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
-.section-1 .pw-wrapper-1-welcome > span.pw-wrapper-1-logo {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > span.pw-wrapper-1-logo {
   -webkit-transition: -webkit-transform 2s cubic-bezier(0.19,1,0.22,1) .4s,opacity 2s cubic-bezier(0.19,1,0.22,1) .4s;
   -moz-transition: -moz-transform 2s cubic-bezier(0.19,1,0.22,1) .4s,opacity 2s cubic-bezier(0.19,1,0.22,1) .4s;
   transition: transform 2s cubic-bezier(0.19,1,0.22,1) .4s,opacity 2s cubic-bezier(0.19,1,0.22,1) .4s;
 }
-.section-1 .pw-wrapper-1-welcome > p {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > p {
   -webkit-transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.section-1 .pw-wrapper-1-start > p {
+.section-1 > div.pw-wrapper-1-start > p {
   -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
   -moz-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
   transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
@@ -480,13 +522,13 @@ div.fsbanner {
 }
 
 /*心机延迟*/
-.section-1 .pw-wrapper-1-welcome > p:nth-child(2) {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > p:nth-child(2) {
   transition-delay: 0.8s;
 }
-.section-1 .pw-wrapper-1-welcome > p:nth-child(3) {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > p:nth-child(3) {
   transition-delay: 0.95s;
 }
-.section-1 .pw-wrapper-1-welcome > p:nth-child(4) {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > p:nth-child(4) {
   transition-delay: 1.05s;
 }
 .section-1 .pw-wrapper-1-balloon {
@@ -770,19 +812,19 @@ div.fsbanner {
 
 
 /*动画前效果*/
-.section-2 .pw-wrapper-1-menu {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu {
   opacity: 0;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-.section-2 .pw-wrapper-1-menu > .pw-wrapper-1-menu-left > p {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-left > p {
   opacity: 0;
   -webkit-transform: translateY(-20%);
   -ms-transform: translateY(-20%);
   transform: translateY(-20%);
 }
-.section-2 .pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li {
   opacity: 0;
   -webkit-transform: translateX(60px);
   -ms-transform: translateX(60px);
@@ -790,19 +832,19 @@ div.fsbanner {
 }
 
 /*动画后效果*/
-.section-2.active .pw-wrapper-1-menu {
+.section-2.active > div.pw-dynamic > div.pw-wrapper-1-menu {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.section-2.active .pw-wrapper-1-menu > .pw-wrapper-1-menu-left > p {
+.section-2.active > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-left > p {
   opacity: 1;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.section-2.active .pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li {
+.section-2.active > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li {
   opacity: 1;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -810,33 +852,33 @@ div.fsbanner {
 }
 
 /*动画执行方式*/
-.section-2 .pw-wrapper-1-menu {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu {
   -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   -moz-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
-.section-2 .pw-wrapper-1-menu > .pw-wrapper-1-menu-left > p {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-left > p {
   -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
   -moz-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
   transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
 }
-.section-2.active .pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li {
+.section-2.active > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li {
   -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /*心机延迟*/
-.section-2 .pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li:nth-child(1) {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li:nth-child(1) {
   transition-delay: 1.0s;
 }
-.section-2 .pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li:nth-child(2) {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li:nth-child(2) {
   transition-delay: 1.2s;
 }
-.section-2 .pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li:nth-child(3) {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li:nth-child(3) {
   transition-delay: 1.35s;
 }
-.section-2 .pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li:nth-child(4) {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > .pw-wrapper-1-menu-right > ul > li:nth-child(4) {
   transition-delay: 1.45s;
 }
 
@@ -1282,9 +1324,9 @@ div.fsbanner {
   transform: translateX(-500px);
 }
 .section-5 > div.pw-wrapper-1-necessary {
-  -webkit-transform: translate(-110%, 50%);
-  -ms-transform: translate(-110%, 50%);
-  transform: translate(-110%, 50%);
+  -webkit-transform: translate(-95%, 50%);
+  -ms-transform: translate(-95%, 50%);
+  transform: translate(-95%, 50%);
 }
 
 

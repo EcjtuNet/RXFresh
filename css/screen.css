@@ -159,23 +159,23 @@
 
 /*section-1*/
 
-.section-1 > div.pw-wrapper-1-welcome {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome {
   width: 180px;
   height: 180px;
   border: rgba(48, 43, 40, 1) 1px solid;
 }
-.section-1 > div.pw-wrapper-1-welcome > span {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > span {
   height: 55px;
   margin: 5px 0 10px;
   -webkit-transform: translateY(100px);
   -ms-transform: translateY(100px);
   transform: translateY(100px);
 }
-.section-1 > div.pw-wrapper-1-welcome > p {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > p {
   font-size: 19px;
   line-height: 20px;
 }
-.section-1 > div.pw-wrapper-1-welcome > p.title-en {
+.section-1 > div.pw-dynamic > div.pw-wrapper-1-welcome > p.title-en {
   font-size: 10px;
   line-height: 15px;
 }
@@ -192,24 +192,24 @@
 
 /*section-2*/
 
-.section-2 > div.pw-wrapper-1-menu {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu {
   width: 180px;
   height: 180px;
   border: rgba(48, 43, 40, 1) 1px solid;
 }
-.section-2 > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-left p {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-left p {
   font-size: 10px;
   padding: 0 10px 0 15px;
   line-height: 25px;
 }
-.section-2 > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul {
   padding: 0 30px 0 15px;
 }
-.section-2 > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul > li {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul > li {
   font-size: 12px;
   line-height: 20px;
 }
-.section-2 > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul > li > a > p.title-arrow {
+.section-2 > div.pw-dynamic > div.pw-wrapper-1-menu > div.pw-wrapper-1-menu-right > ul > li > a > p.title-arrow {
   width: 10px;
   height: 10px;
   margin-top: 6px;
@@ -265,24 +265,8 @@
 /*section-5*/
 
 .section-5 > div.pw-wrapper-1-puzzle {
-  /*width: 100px;
-  height: 200px;
-  -webkit-transform: translate(30px, -110%);
-  -ms-transform: translate(30px, -110%);
-  transform: translate(30px, -110%);*/
   display: none;
 }
-/*.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-2, .pw-wrapper-1-puzzle > div.puzzle-map-7 {
-  height: 20px;
-}
-.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-2 {
-  margin-top: -65px;
-  margin-left: -10px;
-}
-.section-5 > div.pw-wrapper-1-puzzle > div.puzzle-map-7 {
-  margin-top: 50px;
-  margin-left: 10px;
-}*/
 .section-5 > div.pw-wrapper-1-necessary {
   width: 90%;
   height: -moz-calc(100% - 90px);

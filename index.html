@@ -74,11 +74,13 @@
                 <!-- section-1 -->
                 <div class="section section-1">
                   <div class="static-bg"></div>
-                  <div class="pw-wrapper-1-welcome">
-                    <span class="pw-wrapper-1-logo bg-img-size-contain"></span>
-                    <p class="title-cn">花椒</p>
-                    <p class="title-cn">入学指南</p>
-                    <p class="title-en">www.ecjtu.net</p>
+                  <div class="pw-dynamic">
+                    <div class="pw-wrapper-1-welcome">
+                      <span class="pw-wrapper-1-logo bg-img-size-contain"></span>
+                      <p class="title-cn">花椒</p>
+                      <p class="title-cn">入学指南</p>
+                      <p class="title-en">www.ecjtu.net</p>
+                    </div>
                   </div>
                   <div class="pw-wrapper-1-start">
                     <p class="start-cn">开始你的华交旅程</p>
@@ -93,29 +95,31 @@
                   <div class="static-bg"></div>
                   <div class="pw-wrapper-1-cont"><p class="pw-information">information</p></div>
                   <div class="pw-wrapper-1-cont"><p class="pw-doForYou">What can we do for you?</p></div>
-                  <div class="pw-wrapper-1-menu">
-                    <div class="pw-wrapper-1-menu-left fl">
-                      <p class="title-cn">你想知道什么</p>
-                    </div>
-                    <div class="pw-wrapper-1-menu-right fl">
-                      <ul class="menu-right-ul">
-                        <li><a href="#page23">
-                          <p class="title-arrow title-arrow-on bg-img-size-cover fl"></p>
-                          <p class="title-cn menu-right-p">交大简介</p>
-                        </a></li>
-                        <li><a href="#page24">
-                          <p class="title-arrow title-arrow-on bg-img-size-cover fl"></p>
-                          <p class="title-cn menu-right-p">交大政策</p>
-                        </a></li>
-                        <li><a href="#page25">
-                          <p class="title-arrow title-arrow-on bg-img-size-cover fl"></p>
-                          <p class="title-cn menu-right-p">开学必备</p>
-                        </a></li>
-                        <li><a href="#page26">
-                          <p class="title-arrow title-arrow-on bg-img-size-cover fl"></p>
-                          <p class="title-cn menu-right-p">行车路线</p>
-                        </a></li>
-                      </ul>
+                  <div class="pw-dynamic">
+                    <div class="pw-wrapper-1-menu">
+                      <div class="pw-wrapper-1-menu-left fl">
+                        <p class="title-cn">你想知道什么</p>
+                      </div>
+                      <div class="pw-wrapper-1-menu-right fl">
+                        <ul class="menu-right-ul">
+                          <li><a href="#page23">
+                            <p class="title-arrow title-arrow-on bg-img-size-cover fl"></p>
+                            <p class="title-cn menu-right-p">交大简介</p>
+                          </a></li>
+                          <li><a href="#page24">
+                            <p class="title-arrow title-arrow-on bg-img-size-cover fl"></p>
+                            <p class="title-cn menu-right-p">交大政策</p>
+                          </a></li>
+                          <li><a href="#page25">
+                            <p class="title-arrow title-arrow-on bg-img-size-cover fl"></p>
+                            <p class="title-cn menu-right-p">开学必备</p>
+                          </a></li>
+                          <li><a href="#page26">
+                            <p class="title-arrow title-arrow-on bg-img-size-cover fl"></p>
+                            <p class="title-cn menu-right-p">行车路线</p>
+                          </a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -289,7 +293,7 @@
       </div>
     </section>
     
-
+<!-- <div class="lalalalalalalala" style="position: fixed; left: 50%; top: 50%; z-index: 10000000;"></div> -->
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -353,6 +357,69 @@
             });
         })(jQuery);
     </script>
+
+    <script type='text/javascript'>
+      $(document).ready(function(){
+
+        var ua = navigator.userAgent;
+        var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+            isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+            isAndroid = ua.match(/(Android)\s+([\d.]+)/);
+        if(ipad || isIphone || isAndroid) {
+          // 不做任何操作
+        }else{
+          
+          // 获取滚动区域宽度高度
+          var sWidth = $(window).width();
+          var sHeight = $(window).height();
+
+          // 监听鼠标滑动，设置背景动画
+          $(".section").mousemove(function(mLocat){
+
+            // 获取当前鼠标在滚动区域的坐标
+            var mLocatX = mLocat.pageX;
+            var mLocatY = mLocat.pageY;
+
+            // 计算当前鼠标位置在滚动区域的比例
+            var pLocatX = mLocatX / sWidth;
+            var pLocatY = mLocatY / sHeight;
+
+            // 设置translate需要位移的范围(%)
+            var tran = 5;
+            // 计算translate需要位移的值
+            var tranX = - ((50 - tran) + (pLocatX * 10));
+            var tranY = - ((50 + tran) - (pLocatY * 10));
+
+            // 设置rotate需要旋转的范围(deg)
+            var rotate = 20;
+            // 计算rotate各方向需要旋转的值
+            var rotateX = rotate - (pLocatY * rotate * 2) + "deg";
+            var rotateY = - (rotate - (pLocatX * rotate * 2)) + "deg";
+
+
+            // 设置static-bg位移样式
+            $('.static-bg').css("-webkit-transform","translate(" + tranX + "%," + tranY + "%) translate3d(0px, 0px, -2000px) scale(3, 3)");
+
+            var wait = setInterval(function(){
+              if(!$(".static-bg").is(":animated")){
+                clearInterval(wait);
+                // 设置rotate旋转样式
+                $('.pw-dynamic').css("-webkit-transform","rotateX(" + rotateX + ") rotateY(" + rotateY + ")");
+              }
+            },10);
+
+
+            // $(".lalalalalalalala").text(rotateX + ", " + rotateY);
+
+            
+          });
+
+
+        }
+      });
+    </script>
+
+
 
 
   </body>
